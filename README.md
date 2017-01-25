@@ -1,0 +1,1 @@
+# gdk-essential-pojos
