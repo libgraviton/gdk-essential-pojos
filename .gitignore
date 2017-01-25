@@ -1,0 +1,11 @@
+*.class
+target/*
+!target/generated-sources/
+
+# Package Files #
+*.war
+*.ear
+
+# IDE Files
+*.iml
+.idea
