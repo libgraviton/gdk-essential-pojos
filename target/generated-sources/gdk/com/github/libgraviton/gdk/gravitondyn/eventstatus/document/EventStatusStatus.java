@@ -14,7 +14,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * Status
- * <p>
  * 
  * 
  */
@@ -29,7 +28,6 @@ public class EventStatusStatus {
 
     /**
      * Worker ID
-     * <p>
      * ID of a worker
      * (Required)
      * 
@@ -39,7 +37,6 @@ public class EventStatusStatus {
     private String workerId;
     /**
      * Action
-     * <p>
      * 
      * 
      */
@@ -47,7 +44,6 @@ public class EventStatusStatus {
     private EventStatusStatusAction action;
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      */
@@ -56,7 +52,6 @@ public class EventStatusStatus {
     private String id;
     /**
      * Status
-     * <p>
      * A string representing the status (opened, working, failed, done)
      * (Required)
      * 
@@ -67,7 +62,6 @@ public class EventStatusStatus {
 
     /**
      * Worker ID
-     * <p>
      * ID of a worker
      * (Required)
      * 
@@ -81,7 +75,6 @@ public class EventStatusStatus {
 
     /**
      * Worker ID
-     * <p>
      * ID of a worker
      * (Required)
      * 
@@ -95,7 +88,6 @@ public class EventStatusStatus {
 
     /**
      * Action
-     * <p>
      * 
      * 
      * @return
@@ -108,7 +100,6 @@ public class EventStatusStatus {
 
     /**
      * Action
-     * <p>
      * 
      * 
      * @param action
@@ -121,7 +112,6 @@ public class EventStatusStatus {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @return
@@ -134,7 +124,6 @@ public class EventStatusStatus {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @param id
@@ -147,7 +136,6 @@ public class EventStatusStatus {
 
     /**
      * Status
-     * <p>
      * A string representing the status (opened, working, failed, done)
      * (Required)
      * 
@@ -161,7 +149,6 @@ public class EventStatusStatus {
 
     /**
      * Status
-     * <p>
      * A string representing the status (opened, working, failed, done)
      * (Required)
      * 

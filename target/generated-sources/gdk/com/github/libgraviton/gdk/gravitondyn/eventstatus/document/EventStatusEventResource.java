@@ -10,7 +10,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * EventResource
- * <p>
  * 
  * 
  */
@@ -23,7 +22,6 @@ public class EventStatusEventResource {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      */
@@ -32,7 +30,6 @@ public class EventStatusEventResource {
     private String id;
     /**
      * Ref to event resource
-     * <p>
      * A $ref pointing to the resource that triggered this event. If the resource was deleted, it may not exist anymore.
      * 
      */
@@ -42,7 +39,6 @@ public class EventStatusEventResource {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @return
@@ -55,7 +51,6 @@ public class EventStatusEventResource {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @param id
@@ -68,7 +63,6 @@ public class EventStatusEventResource {
 
     /**
      * Ref to event resource
-     * <p>
      * A $ref pointing to the resource that triggered this event. If the resource was deleted, it may not exist anymore.
      * 
      * @return
@@ -81,7 +75,6 @@ public class EventStatusEventResource {
 
     /**
      * Ref to event resource
-     * <p>
      * A $ref pointing to the resource that triggered this event. If the resource was deleted, it may not exist anymore.
      * 
      * @param $ref

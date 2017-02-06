@@ -10,7 +10,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * Subscription
- * <p>
  * 
  * 
  */
@@ -23,7 +22,6 @@ public class EventWorkerSubscription {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      */
@@ -32,7 +30,6 @@ public class EventWorkerSubscription {
     private String id;
     /**
      * Subscriptions
-     * <p>
      * An array of strings containing event names this worker should be notified of
      * (Required)
      * 
@@ -43,7 +40,6 @@ public class EventWorkerSubscription {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @return
@@ -56,7 +52,6 @@ public class EventWorkerSubscription {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @param id
@@ -69,7 +64,6 @@ public class EventWorkerSubscription {
 
     /**
      * Subscriptions
-     * <p>
      * An array of strings containing event names this worker should be notified of
      * (Required)
      * 
@@ -83,7 +77,6 @@ public class EventWorkerSubscription {
 
     /**
      * Subscriptions
-     * <p>
      * An array of strings containing event names this worker should be notified of
      * (Required)
      * 

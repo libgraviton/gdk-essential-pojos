@@ -15,7 +15,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * Description
- * <p>
  * A translated description for action done
  * 
  */
@@ -29,7 +28,6 @@ public class EventStatusActionDescription {
 
     /**
      * Translated String
-     * <p>
      * String in de locale.
      * 
      */
@@ -38,7 +36,6 @@ public class EventStatusActionDescription {
     private String de;
     /**
      * Translated String
-     * <p>
      * String in en locale.
      * (Required)
      * 
@@ -48,7 +45,6 @@ public class EventStatusActionDescription {
     private String en;
     /**
      * Translated String
-     * <p>
      * String in fr locale.
      * 
      */
@@ -60,7 +56,6 @@ public class EventStatusActionDescription {
 
     /**
      * Translated String
-     * <p>
      * String in de locale.
      * 
      * @return
@@ -73,7 +68,6 @@ public class EventStatusActionDescription {
 
     /**
      * Translated String
-     * <p>
      * String in de locale.
      * 
      * @param de
@@ -86,7 +80,6 @@ public class EventStatusActionDescription {
 
     /**
      * Translated String
-     * <p>
      * String in en locale.
      * (Required)
      * 
@@ -100,7 +93,6 @@ public class EventStatusActionDescription {
 
     /**
      * Translated String
-     * <p>
      * String in en locale.
      * (Required)
      * 
@@ -114,7 +106,6 @@ public class EventStatusActionDescription {
 
     /**
      * Translated String
-     * <p>
      * String in fr locale.
      * 
      * @return
@@ -127,7 +118,6 @@ public class EventStatusActionDescription {
 
     /**
      * Translated String
-     * <p>
      * String in fr locale.
      * 
      * @param fr
