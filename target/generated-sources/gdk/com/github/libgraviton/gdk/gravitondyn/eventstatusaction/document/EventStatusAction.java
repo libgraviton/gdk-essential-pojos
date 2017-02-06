@@ -11,7 +11,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * Eventstatusaction
- * <p>
  * Action translation for worker events
  * 
  */
@@ -25,7 +24,6 @@ public class EventStatusAction implements GravitonBase
 
     /**
      * Description
-     * <p>
      * A translated description for action done
      * 
      */
@@ -34,7 +32,6 @@ public class EventStatusAction implements GravitonBase
     private EventStatusActionDescription description;
     /**
      * ID
-     * <p>
      * Unique identifier
      * (Required)
      * 
@@ -45,7 +42,6 @@ public class EventStatusAction implements GravitonBase
 
     /**
      * Description
-     * <p>
      * A translated description for action done
      * 
      * @return
@@ -58,7 +54,6 @@ public class EventStatusAction implements GravitonBase
 
     /**
      * Description
-     * <p>
      * A translated description for action done
      * 
      * @param description
@@ -71,7 +66,6 @@ public class EventStatusAction implements GravitonBase
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * (Required)
      * 
@@ -85,7 +79,6 @@ public class EventStatusAction implements GravitonBase
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * (Required)
      * 

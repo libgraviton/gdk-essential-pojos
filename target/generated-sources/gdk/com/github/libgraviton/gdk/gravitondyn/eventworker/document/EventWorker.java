@@ -13,7 +13,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * Eventworker
- * <p>
  * A service giving the possibility for EventWorkers to register themselves.
  * 
  */
@@ -27,7 +26,6 @@ public class EventWorker implements GravitonBase
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * (Required)
      * 
@@ -37,8 +35,7 @@ public class EventWorker implements GravitonBase
     private String id;
     /**
      * subscription
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      */
     @JsonProperty("subscription")
@@ -47,7 +44,6 @@ public class EventWorker implements GravitonBase
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * (Required)
      * 
@@ -61,7 +57,6 @@ public class EventWorker implements GravitonBase
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * (Required)
      * 
@@ -75,8 +70,7 @@ public class EventWorker implements GravitonBase
 
     /**
      * subscription
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      * @return
      *     The subscription
@@ -88,8 +82,7 @@ public class EventWorker implements GravitonBase
 
     /**
      * subscription
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      * @param subscription
      *     The subscription

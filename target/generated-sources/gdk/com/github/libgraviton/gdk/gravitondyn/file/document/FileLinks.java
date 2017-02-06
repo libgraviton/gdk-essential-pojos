@@ -10,7 +10,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * Links
- * <p>
  * 
  * 
  */
@@ -24,7 +23,6 @@ public class FileLinks {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      */
@@ -33,7 +31,6 @@ public class FileLinks {
     private String id;
     /**
      * Type
-     * <p>
      * Type of the link.
      * 
      */
@@ -42,7 +39,6 @@ public class FileLinks {
     private String type;
     /**
      * Link
-     * <p>
      * Link to any document.
      * 
      */
@@ -52,7 +48,6 @@ public class FileLinks {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @return
@@ -65,7 +60,6 @@ public class FileLinks {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @param id
@@ -78,7 +72,6 @@ public class FileLinks {
 
     /**
      * Type
-     * <p>
      * Type of the link.
      * 
      * @return
@@ -91,7 +84,6 @@ public class FileLinks {
 
     /**
      * Type
-     * <p>
      * Type of the link.
      * 
      * @param type
@@ -104,7 +96,6 @@ public class FileLinks {
 
     /**
      * Link
-     * <p>
      * Link to any document.
      * 
      * @return
@@ -117,7 +108,6 @@ public class FileLinks {
 
     /**
      * Link
-     * <p>
      * Link to any document.
      * 
      * @param $ref

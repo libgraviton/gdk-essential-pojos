@@ -10,7 +10,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * Action
- * <p>
  * 
  * 
  */
@@ -23,7 +22,6 @@ public class EventStatusStatusAction {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      */
@@ -32,7 +30,6 @@ public class EventStatusStatusAction {
     private String id;
     /**
      * Action
-     * <p>
      * Action done for this event, EventWorkerAction
      * 
      */
@@ -42,7 +39,6 @@ public class EventStatusStatusAction {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @return
@@ -55,7 +51,6 @@ public class EventStatusStatusAction {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @param id
@@ -68,7 +63,6 @@ public class EventStatusStatusAction {
 
     /**
      * Action
-     * <p>
      * Action done for this event, EventWorkerAction
      * 
      * @return
@@ -81,7 +75,6 @@ public class EventStatusStatusAction {
 
     /**
      * Action
-     * <p>
      * Action done for this event, EventWorkerAction
      * 
      * @param $ref

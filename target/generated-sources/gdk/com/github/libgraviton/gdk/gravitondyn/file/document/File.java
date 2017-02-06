@@ -13,7 +13,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * File
- * <p>
  * File storage service
  * 
  */
@@ -28,7 +27,6 @@ public class File implements GravitonBase
 
     /**
      * Metadata
-     * <p>
      * 
      * 
      */
@@ -36,8 +34,7 @@ public class File implements GravitonBase
     private FileMetadata metadata;
     /**
      * links
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      */
     @JsonProperty("links")
@@ -45,7 +42,6 @@ public class File implements GravitonBase
     private List<FileLinks> links = new ArrayList<FileLinks>();
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      */
@@ -55,7 +51,6 @@ public class File implements GravitonBase
 
     /**
      * Metadata
-     * <p>
      * 
      * 
      * @return
@@ -68,7 +63,6 @@ public class File implements GravitonBase
 
     /**
      * Metadata
-     * <p>
      * 
      * 
      * @param metadata
@@ -81,8 +75,7 @@ public class File implements GravitonBase
 
     /**
      * links
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      * @return
      *     The links
@@ -94,8 +87,7 @@ public class File implements GravitonBase
 
     /**
      * links
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      * @param links
      *     The links
@@ -107,7 +99,6 @@ public class File implements GravitonBase
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @return
@@ -120,7 +111,6 @@ public class File implements GravitonBase
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @param id
