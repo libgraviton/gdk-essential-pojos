@@ -10,7 +10,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * AdditionalProperties
- * <p>
  * 
  * 
  */
@@ -24,7 +23,6 @@ public class FileMetadataAdditionalProperties {
 
     /**
      * property name
-     * <p>
      * additional property name
      * (Required)
      * 
@@ -34,7 +32,6 @@ public class FileMetadataAdditionalProperties {
     private String name;
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      */
@@ -43,7 +40,6 @@ public class FileMetadataAdditionalProperties {
     private String id;
     /**
      * property value
-     * <p>
      * additional property value
      * (Required)
      * 
@@ -54,7 +50,6 @@ public class FileMetadataAdditionalProperties {
 
     /**
      * property name
-     * <p>
      * additional property name
      * (Required)
      * 
@@ -68,7 +63,6 @@ public class FileMetadataAdditionalProperties {
 
     /**
      * property name
-     * <p>
      * additional property name
      * (Required)
      * 
@@ -82,7 +76,6 @@ public class FileMetadataAdditionalProperties {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @return
@@ -95,7 +88,6 @@ public class FileMetadataAdditionalProperties {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @param id
@@ -108,7 +100,6 @@ public class FileMetadataAdditionalProperties {
 
     /**
      * property value
-     * <p>
      * additional property value
      * (Required)
      * 
@@ -122,7 +113,6 @@ public class FileMetadataAdditionalProperties {
 
     /**
      * property value
-     * <p>
      * additional property value
      * (Required)
      * 

@@ -14,7 +14,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * Eventstatus
- * <p>
  * A service providing resources providing status' on events subscribed by workers.
  * 
  */
@@ -33,7 +32,6 @@ public class EventStatus implements GravitonBase
 
     /**
      * Event Name
-     * <p>
      * Name of the created event
      * 
      */
@@ -42,8 +40,7 @@ public class EventStatus implements GravitonBase
     private String eventName;
     /**
      * information
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      */
     @JsonProperty("information")
@@ -51,7 +48,6 @@ public class EventStatus implements GravitonBase
     private List<EventStatusInformation> information = new ArrayList<EventStatusInformation>();
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      */
@@ -60,7 +56,6 @@ public class EventStatus implements GravitonBase
     private String id;
     /**
      * User Identifier
-     * <p>
      * User who created the event entry
      * 
      */
@@ -69,7 +64,6 @@ public class EventStatus implements GravitonBase
     private String userId;
     /**
      * EventResource
-     * <p>
      * 
      * 
      */
@@ -77,7 +71,6 @@ public class EventStatus implements GravitonBase
     private EventStatusEventResource eventResource;
     /**
      * Creation date
-     * <p>
      * Creation date
      * 
      */
@@ -86,8 +79,7 @@ public class EventStatus implements GravitonBase
     private Date createDate;
     /**
      * status
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      */
     @JsonProperty("status")
@@ -96,7 +88,6 @@ public class EventStatus implements GravitonBase
 
     /**
      * Event Name
-     * <p>
      * Name of the created event
      * 
      * @return
@@ -109,7 +100,6 @@ public class EventStatus implements GravitonBase
 
     /**
      * Event Name
-     * <p>
      * Name of the created event
      * 
      * @param eventName
@@ -122,8 +112,7 @@ public class EventStatus implements GravitonBase
 
     /**
      * information
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      * @return
      *     The information
@@ -135,8 +124,7 @@ public class EventStatus implements GravitonBase
 
     /**
      * information
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      * @param information
      *     The information
@@ -148,7 +136,6 @@ public class EventStatus implements GravitonBase
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @return
@@ -161,7 +148,6 @@ public class EventStatus implements GravitonBase
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @param id
@@ -174,7 +160,6 @@ public class EventStatus implements GravitonBase
 
     /**
      * User Identifier
-     * <p>
      * User who created the event entry
      * 
      * @return
@@ -187,7 +172,6 @@ public class EventStatus implements GravitonBase
 
     /**
      * User Identifier
-     * <p>
      * User who created the event entry
      * 
      * @param userId
@@ -200,7 +184,6 @@ public class EventStatus implements GravitonBase
 
     /**
      * EventResource
-     * <p>
      * 
      * 
      * @return
@@ -213,7 +196,6 @@ public class EventStatus implements GravitonBase
 
     /**
      * EventResource
-     * <p>
      * 
      * 
      * @param eventResource
@@ -226,7 +208,6 @@ public class EventStatus implements GravitonBase
 
     /**
      * Creation date
-     * <p>
      * Creation date
      * 
      * @return
@@ -239,7 +220,6 @@ public class EventStatus implements GravitonBase
 
     /**
      * Creation date
-     * <p>
      * Creation date
      * 
      * @param createDate
@@ -252,8 +232,7 @@ public class EventStatus implements GravitonBase
 
     /**
      * status
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      * @return
      *     The status
@@ -265,8 +244,7 @@ public class EventStatus implements GravitonBase
 
     /**
      * status
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      * @param status
      *     The status

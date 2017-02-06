@@ -14,7 +14,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * Information
- * <p>
  * 
  * 
  */
@@ -30,7 +29,6 @@ public class EventStatusInformation {
 
     /**
      * Worker ID
-     * <p>
      * ID of a worker
      * (Required)
      * 
@@ -40,7 +38,6 @@ public class EventStatusInformation {
     private String workerId;
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      */
@@ -49,7 +46,6 @@ public class EventStatusInformation {
     private String id;
     /**
      * Information type
-     * <p>
      * The type of information the worker published
      * (Required)
      * 
@@ -59,7 +55,6 @@ public class EventStatusInformation {
     private EventStatusInformation.Type type;
     /**
      * Ref
-     * <p>
      * An optional $ref that can be written by the worker
      * 
      */
@@ -68,7 +63,6 @@ public class EventStatusInformation {
     private String $ref;
     /**
      * Worker output
-     * <p>
      * A place where a worker can put any information content
      * (Required)
      * 
@@ -79,7 +73,6 @@ public class EventStatusInformation {
 
     /**
      * Worker ID
-     * <p>
      * ID of a worker
      * (Required)
      * 
@@ -93,7 +86,6 @@ public class EventStatusInformation {
 
     /**
      * Worker ID
-     * <p>
      * ID of a worker
      * (Required)
      * 
@@ -107,7 +99,6 @@ public class EventStatusInformation {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @return
@@ -120,7 +111,6 @@ public class EventStatusInformation {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @param id
@@ -133,7 +123,6 @@ public class EventStatusInformation {
 
     /**
      * Information type
-     * <p>
      * The type of information the worker published
      * (Required)
      * 
@@ -147,7 +136,6 @@ public class EventStatusInformation {
 
     /**
      * Information type
-     * <p>
      * The type of information the worker published
      * (Required)
      * 
@@ -161,7 +149,6 @@ public class EventStatusInformation {
 
     /**
      * Ref
-     * <p>
      * An optional $ref that can be written by the worker
      * 
      * @return
@@ -174,7 +161,6 @@ public class EventStatusInformation {
 
     /**
      * Ref
-     * <p>
      * An optional $ref that can be written by the worker
      * 
      * @param $ref
@@ -187,7 +173,6 @@ public class EventStatusInformation {
 
     /**
      * Worker output
-     * <p>
      * A place where a worker can put any information content
      * (Required)
      * 
@@ -201,7 +186,6 @@ public class EventStatusInformation {
 
     /**
      * Worker output
-     * <p>
      * A place where a worker can put any information content
      * (Required)
      * 

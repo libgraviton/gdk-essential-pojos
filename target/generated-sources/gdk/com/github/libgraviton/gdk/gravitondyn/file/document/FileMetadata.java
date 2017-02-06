@@ -17,7 +17,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * Metadata
- * <p>
  * 
  * 
  */
@@ -39,7 +38,6 @@ public class FileMetadata {
 
     /**
      * Additional Information
-     * <p>
      * Additional information for this file.
      * 
      */
@@ -48,7 +46,6 @@ public class FileMetadata {
     private String additionalInformation;
     /**
      * Modification date
-     * <p>
      * Timestamp of the last file change.
      * 
      */
@@ -57,7 +54,6 @@ public class FileMetadata {
     private Date modificationDate;
     /**
      * File name
-     * <p>
      * Name of the file as it should get displayed to the user.
      * 
      */
@@ -66,7 +62,6 @@ public class FileMetadata {
     private String filename;
     /**
      * File size
-     * <p>
      * Size of file.
      * 
      */
@@ -75,7 +70,6 @@ public class FileMetadata {
     private Integer size;
     /**
      * MIME Type
-     * <p>
      * MIME-Type of file.
      * 
      */
@@ -84,8 +78,7 @@ public class FileMetadata {
     private String mime;
     /**
      * action
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      */
     @JsonProperty("action")
@@ -93,7 +86,6 @@ public class FileMetadata {
     private List<FileMetadataAction> action = new ArrayList<FileMetadataAction>();
     /**
      * Language Iso
-     * <p>
      * Short language iso code, in lowercase.
      * 
      */
@@ -102,7 +94,6 @@ public class FileMetadata {
     private FileMetadata.Language language;
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      */
@@ -111,8 +102,7 @@ public class FileMetadata {
     private String id;
     /**
      * additionalProperties
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      */
     @JsonProperty("additionalProperties")
@@ -120,7 +110,6 @@ public class FileMetadata {
     private List<FileMetadataAdditionalProperties> additionalProperties = new ArrayList<FileMetadataAdditionalProperties>();
     /**
      * Unique file content hash value
-     * <p>
      * File content hash encoded sha256
      * 
      */
@@ -129,7 +118,6 @@ public class FileMetadata {
     private String hash;
     /**
      * Creation date
-     * <p>
      * Timestamp of file upload.
      * 
      */
@@ -139,7 +127,6 @@ public class FileMetadata {
 
     /**
      * Additional Information
-     * <p>
      * Additional information for this file.
      * 
      * @return
@@ -152,7 +139,6 @@ public class FileMetadata {
 
     /**
      * Additional Information
-     * <p>
      * Additional information for this file.
      * 
      * @param additionalInformation
@@ -165,7 +151,6 @@ public class FileMetadata {
 
     /**
      * Modification date
-     * <p>
      * Timestamp of the last file change.
      * 
      * @return
@@ -178,7 +163,6 @@ public class FileMetadata {
 
     /**
      * Modification date
-     * <p>
      * Timestamp of the last file change.
      * 
      * @param modificationDate
@@ -191,7 +175,6 @@ public class FileMetadata {
 
     /**
      * File name
-     * <p>
      * Name of the file as it should get displayed to the user.
      * 
      * @return
@@ -204,7 +187,6 @@ public class FileMetadata {
 
     /**
      * File name
-     * <p>
      * Name of the file as it should get displayed to the user.
      * 
      * @param filename
@@ -217,7 +199,6 @@ public class FileMetadata {
 
     /**
      * File size
-     * <p>
      * Size of file.
      * 
      * @return
@@ -230,7 +211,6 @@ public class FileMetadata {
 
     /**
      * File size
-     * <p>
      * Size of file.
      * 
      * @param size
@@ -243,7 +223,6 @@ public class FileMetadata {
 
     /**
      * MIME Type
-     * <p>
      * MIME-Type of file.
      * 
      * @return
@@ -256,7 +235,6 @@ public class FileMetadata {
 
     /**
      * MIME Type
-     * <p>
      * MIME-Type of file.
      * 
      * @param mime
@@ -269,8 +247,7 @@ public class FileMetadata {
 
     /**
      * action
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      * @return
      *     The action
@@ -282,8 +259,7 @@ public class FileMetadata {
 
     /**
      * action
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      * @param action
      *     The action
@@ -295,7 +271,6 @@ public class FileMetadata {
 
     /**
      * Language Iso
-     * <p>
      * Short language iso code, in lowercase.
      * 
      * @return
@@ -308,7 +283,6 @@ public class FileMetadata {
 
     /**
      * Language Iso
-     * <p>
      * Short language iso code, in lowercase.
      * 
      * @param language
@@ -321,7 +295,6 @@ public class FileMetadata {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @return
@@ -334,7 +307,6 @@ public class FileMetadata {
 
     /**
      * ID
-     * <p>
      * Unique identifier
      * 
      * @param id
@@ -347,8 +319,7 @@ public class FileMetadata {
 
     /**
      * additionalProperties
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      * @return
      *     The additionalProperties
@@ -360,8 +331,7 @@ public class FileMetadata {
 
     /**
      * additionalProperties
-     * <p>
-     * @todo replace me
+     * todo replace me
      * 
      * @param additionalProperties
      *     The additionalProperties
@@ -373,7 +343,6 @@ public class FileMetadata {
 
     /**
      * Unique file content hash value
-     * <p>
      * File content hash encoded sha256
      * 
      * @return
@@ -386,7 +355,6 @@ public class FileMetadata {
 
     /**
      * Unique file content hash value
-     * <p>
      * File content hash encoded sha256
      * 
      * @param hash
@@ -399,7 +367,6 @@ public class FileMetadata {
 
     /**
      * Creation date
-     * <p>
      * Timestamp of file upload.
      * 
      * @return
@@ -412,7 +379,6 @@ public class FileMetadata {
 
     /**
      * Creation date
-     * <p>
      * Timestamp of file upload.
      * 
      * @param createDate
