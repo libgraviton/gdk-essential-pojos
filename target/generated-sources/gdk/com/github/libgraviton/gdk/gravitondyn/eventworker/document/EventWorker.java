@@ -8,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.github.libgraviton.gdk.data.GravitonBase;
-import org.apache.commons.lang.builder.ToStringBuilder;
 
 
 /**
@@ -90,11 +89,6 @@ public class EventWorker implements GravitonBase
     @JsonProperty("subscription")
     public void setSubscription(List<EventWorkerSubscription> subscription) {
         this.subscription = subscription;
-    }
-
-    @Override
-    public String toString() {
-        return ToStringBuilder.reflectionToString(this);
     }
 
 }
