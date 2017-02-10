@@ -9,7 +9,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonValue;
-import org.apache.commons.lang.builder.ToStringBuilder;
 
 
 /**
@@ -158,11 +157,6 @@ public class EventStatusStatus {
     @JsonProperty("status")
     public void setStatus(EventStatusStatus.Status status) {
         this.status = status;
-    }
-
-    @Override
-    public String toString() {
-        return ToStringBuilder.reflectionToString(this);
     }
 
     public enum Status {

@@ -9,7 +9,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.github.libgraviton.gdk.data.GravitonBase;
-import org.apache.commons.lang.builder.ToStringBuilder;
 
 
 /**
@@ -252,11 +251,6 @@ public class EventStatus implements GravitonBase
     @JsonProperty("status")
     public void setStatus(List<EventStatusStatus> status) {
         this.status = status;
-    }
-
-    @Override
-    public String toString() {
-        return ToStringBuilder.reflectionToString(this);
     }
 
 }
