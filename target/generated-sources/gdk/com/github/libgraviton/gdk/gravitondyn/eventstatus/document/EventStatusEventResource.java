@@ -14,19 +14,10 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "id",
     "$ref"
 })
 public class EventStatusEventResource {
 
-    /**
-     * ID
-     * Unique identifier
-     * 
-     */
-    @JsonProperty("id")
-    @JsonPropertyDescription("")
-    private String id;
     /**
      * Ref to event resource
      * A $ref pointing to the resource that triggered this event. If the resource was deleted, it may not exist anymore.
@@ -35,30 +26,6 @@ public class EventStatusEventResource {
     @JsonProperty("$ref")
     @JsonPropertyDescription("")
     private String $ref;
-
-    /**
-     * ID
-     * Unique identifier
-     * 
-     * @return
-     *     The id
-     */
-    @JsonProperty("id")
-    public String getId() {
-        return id;
-    }
-
-    /**
-     * ID
-     * Unique identifier
-     * 
-     * @param id
-     *     The id
-     */
-    @JsonProperty("id")
-    public void setId(String id) {
-        this.id = id;
-    }
 
     /**
      * Ref to event resource
