@@ -20,7 +20,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 @JsonPropertyOrder({
     "workerId",
     "action",
-    "id",
     "status"
 })
 public class EventStatusStatus {
@@ -41,14 +40,6 @@ public class EventStatusStatus {
      */
     @JsonProperty("action")
     private EventStatusStatusAction action;
-    /**
-     * ID
-     * Unique identifier
-     * 
-     */
-    @JsonProperty("id")
-    @JsonPropertyDescription("")
-    private String id;
     /**
      * Status
      * A string representing the status (opened, working, failed, done)
@@ -107,30 +98,6 @@ public class EventStatusStatus {
     @JsonProperty("action")
     public void setAction(EventStatusStatusAction action) {
         this.action = action;
-    }
-
-    /**
-     * ID
-     * Unique identifier
-     * 
-     * @return
-     *     The id
-     */
-    @JsonProperty("id")
-    public String getId() {
-        return id;
-    }
-
-    /**
-     * ID
-     * Unique identifier
-     * 
-     * @param id
-     *     The id
-     */
-    @JsonProperty("id")
-    public void setId(String id) {
-        this.id = id;
     }
 
     /**

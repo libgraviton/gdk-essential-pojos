@@ -19,7 +19,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "workerId",
-    "id",
     "type",
     "$ref",
     "content"
@@ -35,14 +34,6 @@ public class EventStatusInformation {
     @JsonProperty("workerId")
     @JsonPropertyDescription("")
     private String workerId;
-    /**
-     * ID
-     * Unique identifier
-     * 
-     */
-    @JsonProperty("id")
-    @JsonPropertyDescription("")
-    private String id;
     /**
      * Information type
      * The type of information the worker published
@@ -94,30 +85,6 @@ public class EventStatusInformation {
     @JsonProperty("workerId")
     public void setWorkerId(String workerId) {
         this.workerId = workerId;
-    }
-
-    /**
-     * ID
-     * Unique identifier
-     * 
-     * @return
-     *     The id
-     */
-    @JsonProperty("id")
-    public String getId() {
-        return id;
-    }
-
-    /**
-     * ID
-     * Unique identifier
-     * 
-     * @param id
-     *     The id
-     */
-    @JsonProperty("id")
-    public void setId(String id) {
-        this.id = id;
     }
 
     /**

@@ -14,19 +14,10 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "id",
     "event"
 })
 public class EventWorkerSubscription {
 
-    /**
-     * ID
-     * Unique identifier
-     * 
-     */
-    @JsonProperty("id")
-    @JsonPropertyDescription("")
-    private String id;
     /**
      * Subscriptions
      * An array of strings containing event names this worker should be notified of
@@ -36,30 +27,6 @@ public class EventWorkerSubscription {
     @JsonProperty("event")
     @JsonPropertyDescription("")
     private String event;
-
-    /**
-     * ID
-     * Unique identifier
-     * 
-     * @return
-     *     The id
-     */
-    @JsonProperty("id")
-    public String getId() {
-        return id;
-    }
-
-    /**
-     * ID
-     * Unique identifier
-     * 
-     * @param id
-     *     The id
-     */
-    @JsonProperty("id")
-    public void setId(String id) {
-        this.id = id;
-    }
 
     /**
      * Subscriptions

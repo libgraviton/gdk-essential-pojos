@@ -32,7 +32,7 @@ public class File implements GravitonBase
     @JsonProperty("metadata")
     private FileMetadata metadata;
     /**
-     * links
+     * Links
      * todo replace me
      * 
      */
@@ -73,7 +73,7 @@ public class File implements GravitonBase
     }
 
     /**
-     * links
+     * Links
      * todo replace me
      * 
      * @return
@@ -85,7 +85,7 @@ public class File implements GravitonBase
     }
 
     /**
-     * links
+     * Links
      * todo replace me
      * 
      * @param links

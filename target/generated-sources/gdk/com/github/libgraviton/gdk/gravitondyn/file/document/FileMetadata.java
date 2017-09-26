@@ -28,10 +28,10 @@ import com.fasterxml.jackson.annotation.JsonValue;
     "mime",
     "action",
     "language",
-    "id",
     "additionalProperties",
     "hash",
-    "createDate"
+    "createDate",
+    "order"
 })
 public class FileMetadata {
 
@@ -76,7 +76,7 @@ public class FileMetadata {
     @JsonPropertyDescription("")
     private String mime;
     /**
-     * action
+     * Action
      * todo replace me
      * 
      */
@@ -92,15 +92,7 @@ public class FileMetadata {
     @JsonPropertyDescription("")
     private FileMetadata.Language language;
     /**
-     * ID
-     * Unique identifier
-     * 
-     */
-    @JsonProperty("id")
-    @JsonPropertyDescription("")
-    private String id;
-    /**
-     * additionalProperties
+     * Additional properties
      * todo replace me
      * 
      */
@@ -123,6 +115,14 @@ public class FileMetadata {
     @JsonProperty("createDate")
     @JsonPropertyDescription("")
     private Date createDate;
+    /**
+     * order information if needed by client
+     * can be set by clients to persist a specific order to display files
+     * 
+     */
+    @JsonProperty("order")
+    @JsonPropertyDescription("")
+    private Integer order;
 
     /**
      * Additional Information
@@ -245,7 +245,7 @@ public class FileMetadata {
     }
 
     /**
-     * action
+     * Action
      * todo replace me
      * 
      * @return
@@ -257,7 +257,7 @@ public class FileMetadata {
     }
 
     /**
-     * action
+     * Action
      * todo replace me
      * 
      * @param action
@@ -293,31 +293,7 @@ public class FileMetadata {
     }
 
     /**
-     * ID
-     * Unique identifier
-     * 
-     * @return
-     *     The id
-     */
-    @JsonProperty("id")
-    public String getId() {
-        return id;
-    }
-
-    /**
-     * ID
-     * Unique identifier
-     * 
-     * @param id
-     *     The id
-     */
-    @JsonProperty("id")
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    /**
-     * additionalProperties
+     * Additional properties
      * todo replace me
      * 
      * @return
@@ -329,7 +305,7 @@ public class FileMetadata {
     }
 
     /**
-     * additionalProperties
+     * Additional properties
      * todo replace me
      * 
      * @param additionalProperties
@@ -386,6 +362,30 @@ public class FileMetadata {
     @JsonProperty("createDate")
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
+    }
+
+    /**
+     * order information if needed by client
+     * can be set by clients to persist a specific order to display files
+     * 
+     * @return
+     *     The order
+     */
+    @JsonProperty("order")
+    public Integer getOrder() {
+        return order;
+    }
+
+    /**
+     * order information if needed by client
+     * can be set by clients to persist a specific order to display files
+     * 
+     * @param order
+     *     The order
+     */
+    @JsonProperty("order")
+    public void setOrder(Integer order) {
+        this.order = order;
     }
 
     public enum Language {

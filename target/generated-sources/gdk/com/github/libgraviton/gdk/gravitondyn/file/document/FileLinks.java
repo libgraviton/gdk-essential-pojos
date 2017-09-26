@@ -14,20 +14,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "id",
     "type",
     "$ref"
 })
 public class FileLinks {
 
-    /**
-     * ID
-     * Unique identifier
-     * 
-     */
-    @JsonProperty("id")
-    @JsonPropertyDescription("")
-    private String id;
     /**
      * Type
      * Type of the link.
@@ -44,30 +35,6 @@ public class FileLinks {
     @JsonProperty("$ref")
     @JsonPropertyDescription("")
     private String $ref;
-
-    /**
-     * ID
-     * Unique identifier
-     * 
-     * @return
-     *     The id
-     */
-    @JsonProperty("id")
-    public String getId() {
-        return id;
-    }
-
-    /**
-     * ID
-     * Unique identifier
-     * 
-     * @param id
-     *     The id
-     */
-    @JsonProperty("id")
-    public void setId(String id) {
-        this.id = id;
-    }
 
     /**
      * Type

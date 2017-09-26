@@ -33,7 +33,7 @@ public class EventWorker implements GravitonBase
     @JsonPropertyDescription("")
     private String id;
     /**
-     * subscription
+     * Subscription
      * todo replace me
      * 
      */
@@ -68,7 +68,7 @@ public class EventWorker implements GravitonBase
     }
 
     /**
-     * subscription
+     * Subscription
      * todo replace me
      * 
      * @return
@@ -80,7 +80,7 @@ public class EventWorker implements GravitonBase
     }
 
     /**
-     * subscription
+     * Subscription
      * todo replace me
      * 
      * @param subscription

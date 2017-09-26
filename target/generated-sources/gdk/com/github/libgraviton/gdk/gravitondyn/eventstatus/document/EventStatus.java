@@ -38,7 +38,7 @@ public class EventStatus implements GravitonBase
     @JsonPropertyDescription("")
     private String eventName;
     /**
-     * information
+     * Information
      * todo replace me
      * 
      */
@@ -77,7 +77,7 @@ public class EventStatus implements GravitonBase
     @JsonPropertyDescription("")
     private Date createDate;
     /**
-     * status
+     * Status
      * todo replace me
      * 
      */
@@ -110,7 +110,7 @@ public class EventStatus implements GravitonBase
     }
 
     /**
-     * information
+     * Information
      * todo replace me
      * 
      * @return
@@ -122,7 +122,7 @@ public class EventStatus implements GravitonBase
     }
 
     /**
-     * information
+     * Information
      * todo replace me
      * 
      * @param information
@@ -230,7 +230,7 @@ public class EventStatus implements GravitonBase
     }
 
     /**
-     * status
+     * Status
      * todo replace me
      * 
      * @return
@@ -242,7 +242,7 @@ public class EventStatus implements GravitonBase
     }
 
     /**
-     * status
+     * Status
      * todo replace me
      * 
      * @param status
