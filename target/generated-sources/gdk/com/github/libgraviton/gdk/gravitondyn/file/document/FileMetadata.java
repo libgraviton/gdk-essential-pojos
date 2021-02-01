@@ -22,14 +22,17 @@ import com.fasterxml.jackson.annotation.JsonValue;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "additionalInformation",
+    "mime",
+    "language",
     "modificationDate",
     "filename",
     "size",
-    "mime",
+    "deletedDate",
     "action",
-    "language",
+    "id",
     "additionalProperties",
     "hash",
+    "tenant",
     "createDate",
     "order"
 })
@@ -43,6 +46,22 @@ public class FileMetadata {
     @JsonProperty("additionalInformation")
     @JsonPropertyDescription("")
     private String additionalInformation;
+    /**
+     * MIME Type
+     * MIME-Type of file.
+     * 
+     */
+    @JsonProperty("mime")
+    @JsonPropertyDescription("")
+    private String mime;
+    /**
+     * Language Iso
+     * Short language iso code, in lowercase.
+     * 
+     */
+    @JsonProperty("language")
+    @JsonPropertyDescription("")
+    private FileMetadata.Language language;
     /**
      * Modification date
      * Timestamp of the last file change.
@@ -68,13 +87,13 @@ public class FileMetadata {
     @JsonPropertyDescription("")
     private Integer size;
     /**
-     * MIME Type
-     * MIME-Type of file.
+     * 
+     * 
      * 
      */
-    @JsonProperty("mime")
+    @JsonProperty("deletedDate")
     @JsonPropertyDescription("")
-    private String mime;
+    private Date deletedDate;
     /**
      * Action
      * todo replace me
@@ -84,13 +103,13 @@ public class FileMetadata {
     @JsonPropertyDescription("")
     private List<FileMetadataAction> action = new ArrayList<FileMetadataAction>();
     /**
-     * Language Iso
-     * Short language iso code, in lowercase.
+     * ID
+     * Unique identifier
      * 
      */
-    @JsonProperty("language")
+    @JsonProperty("id")
     @JsonPropertyDescription("")
-    private FileMetadata.Language language;
+    private String id;
     /**
      * Additional properties
      * todo replace me
@@ -107,6 +126,14 @@ public class FileMetadata {
     @JsonProperty("hash")
     @JsonPropertyDescription("")
     private String hash;
+    /**
+     * 
+     * 
+     * 
+     */
+    @JsonProperty("tenant")
+    @JsonPropertyDescription("")
+    private Integer tenant;
     /**
      * Creation date
      * Timestamp of file upload.
@@ -146,6 +173,54 @@ public class FileMetadata {
     @JsonProperty("additionalInformation")
     public void setAdditionalInformation(String additionalInformation) {
         this.additionalInformation = additionalInformation;
+    }
+
+    /**
+     * MIME Type
+     * MIME-Type of file.
+     * 
+     * @return
+     *     The mime
+     */
+    @JsonProperty("mime")
+    public String getMime() {
+        return mime;
+    }
+
+    /**
+     * MIME Type
+     * MIME-Type of file.
+     * 
+     * @param mime
+     *     The mime
+     */
+    @JsonProperty("mime")
+    public void setMime(String mime) {
+        this.mime = mime;
+    }
+
+    /**
+     * Language Iso
+     * Short language iso code, in lowercase.
+     * 
+     * @return
+     *     The language
+     */
+    @JsonProperty("language")
+    public FileMetadata.Language getLanguage() {
+        return language;
+    }
+
+    /**
+     * Language Iso
+     * Short language iso code, in lowercase.
+     * 
+     * @param language
+     *     The language
+     */
+    @JsonProperty("language")
+    public void setLanguage(FileMetadata.Language language) {
+        this.language = language;
     }
 
     /**
@@ -221,27 +296,27 @@ public class FileMetadata {
     }
 
     /**
-     * MIME Type
-     * MIME-Type of file.
+     * 
+     * 
      * 
      * @return
-     *     The mime
+     *     The deletedDate
      */
-    @JsonProperty("mime")
-    public String getMime() {
-        return mime;
+    @JsonProperty("deletedDate")
+    public Date getDeletedDate() {
+        return deletedDate;
     }
 
     /**
-     * MIME Type
-     * MIME-Type of file.
      * 
-     * @param mime
-     *     The mime
+     * 
+     * 
+     * @param deletedDate
+     *     The deletedDate
      */
-    @JsonProperty("mime")
-    public void setMime(String mime) {
-        this.mime = mime;
+    @JsonProperty("deletedDate")
+    public void setDeletedDate(Date deletedDate) {
+        this.deletedDate = deletedDate;
     }
 
     /**
@@ -269,27 +344,27 @@ public class FileMetadata {
     }
 
     /**
-     * Language Iso
-     * Short language iso code, in lowercase.
+     * ID
+     * Unique identifier
      * 
      * @return
-     *     The language
+     *     The id
      */
-    @JsonProperty("language")
-    public FileMetadata.Language getLanguage() {
-        return language;
+    @JsonProperty("id")
+    public String getId() {
+        return id;
     }
 
     /**
-     * Language Iso
-     * Short language iso code, in lowercase.
+     * ID
+     * Unique identifier
      * 
-     * @param language
-     *     The language
+     * @param id
+     *     The id
      */
-    @JsonProperty("language")
-    public void setLanguage(FileMetadata.Language language) {
-        this.language = language;
+    @JsonProperty("id")
+    public void setId(String id) {
+        this.id = id;
     }
 
     /**
@@ -338,6 +413,30 @@ public class FileMetadata {
     @JsonProperty("hash")
     public void setHash(String hash) {
         this.hash = hash;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @return
+     *     The tenant
+     */
+    @JsonProperty("tenant")
+    public Integer getTenant() {
+        return tenant;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @param tenant
+     *     The tenant
+     */
+    @JsonProperty("tenant")
+    public void setTenant(Integer tenant) {
+        this.tenant = tenant;
     }
 
     /**

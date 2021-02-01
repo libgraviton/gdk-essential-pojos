@@ -1,6 +1,7 @@
 
 package com.github.libgraviton.gdk.gravitondyn.eventstatus.document;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -19,7 +20,10 @@ import com.fasterxml.jackson.annotation.JsonValue;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "workerId",
+    "deletedDate",
     "action",
+    "id",
+    "tenant",
     "status"
 })
 public class EventStatusStatus {
@@ -34,12 +38,36 @@ public class EventStatusStatus {
     @JsonPropertyDescription("")
     private String workerId;
     /**
+     * 
+     * 
+     * 
+     */
+    @JsonProperty("deletedDate")
+    @JsonPropertyDescription("")
+    private Date deletedDate;
+    /**
      * Action
      * 
      * 
      */
     @JsonProperty("action")
     private EventStatusStatusAction action;
+    /**
+     * ID
+     * Unique identifier
+     * 
+     */
+    @JsonProperty("id")
+    @JsonPropertyDescription("")
+    private String id;
+    /**
+     * 
+     * 
+     * 
+     */
+    @JsonProperty("tenant")
+    @JsonPropertyDescription("")
+    private Integer tenant;
     /**
      * Status
      * A string representing the status (opened, working, failed, done)
@@ -77,6 +105,30 @@ public class EventStatusStatus {
     }
 
     /**
+     * 
+     * 
+     * 
+     * @return
+     *     The deletedDate
+     */
+    @JsonProperty("deletedDate")
+    public Date getDeletedDate() {
+        return deletedDate;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @param deletedDate
+     *     The deletedDate
+     */
+    @JsonProperty("deletedDate")
+    public void setDeletedDate(Date deletedDate) {
+        this.deletedDate = deletedDate;
+    }
+
+    /**
      * Action
      * 
      * 
@@ -98,6 +150,54 @@ public class EventStatusStatus {
     @JsonProperty("action")
     public void setAction(EventStatusStatusAction action) {
         this.action = action;
+    }
+
+    /**
+     * ID
+     * Unique identifier
+     * 
+     * @return
+     *     The id
+     */
+    @JsonProperty("id")
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * ID
+     * Unique identifier
+     * 
+     * @param id
+     *     The id
+     */
+    @JsonProperty("id")
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @return
+     *     The tenant
+     */
+    @JsonProperty("tenant")
+    public Integer getTenant() {
+        return tenant;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @param tenant
+     *     The tenant
+     */
+    @JsonProperty("tenant")
+    public void setTenant(Integer tenant) {
+        this.tenant = tenant;
     }
 
     /**

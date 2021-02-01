@@ -1,6 +1,7 @@
 
 package com.github.libgraviton.gdk.gravitondyn.file.document;
 
+import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
@@ -14,11 +15,22 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
+    "deletedDate",
     "name",
-    "value"
+    "id",
+    "value",
+    "tenant"
 })
 public class FileMetadataAdditionalProperties {
 
+    /**
+     * 
+     * 
+     * 
+     */
+    @JsonProperty("deletedDate")
+    @JsonPropertyDescription("")
+    private Date deletedDate;
     /**
      * property name
      * additional property name
@@ -29,6 +41,14 @@ public class FileMetadataAdditionalProperties {
     @JsonPropertyDescription("")
     private String name;
     /**
+     * ID
+     * Unique identifier
+     * 
+     */
+    @JsonProperty("id")
+    @JsonPropertyDescription("")
+    private String id;
+    /**
      * property value
      * additional property value
      * (Required)
@@ -37,6 +57,38 @@ public class FileMetadataAdditionalProperties {
     @JsonProperty("value")
     @JsonPropertyDescription("")
     private String value;
+    /**
+     * 
+     * 
+     * 
+     */
+    @JsonProperty("tenant")
+    @JsonPropertyDescription("")
+    private Integer tenant;
+
+    /**
+     * 
+     * 
+     * 
+     * @return
+     *     The deletedDate
+     */
+    @JsonProperty("deletedDate")
+    public Date getDeletedDate() {
+        return deletedDate;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @param deletedDate
+     *     The deletedDate
+     */
+    @JsonProperty("deletedDate")
+    public void setDeletedDate(Date deletedDate) {
+        this.deletedDate = deletedDate;
+    }
 
     /**
      * property name
@@ -65,6 +117,30 @@ public class FileMetadataAdditionalProperties {
     }
 
     /**
+     * ID
+     * Unique identifier
+     * 
+     * @return
+     *     The id
+     */
+    @JsonProperty("id")
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * ID
+     * Unique identifier
+     * 
+     * @param id
+     *     The id
+     */
+    @JsonProperty("id")
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    /**
      * property value
      * additional property value
      * (Required)
@@ -88,6 +164,30 @@ public class FileMetadataAdditionalProperties {
     @JsonProperty("value")
     public void setValue(String value) {
         this.value = value;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @return
+     *     The tenant
+     */
+    @JsonProperty("tenant")
+    public Integer getTenant() {
+        return tenant;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @param tenant
+     *     The tenant
+     */
+    @JsonProperty("tenant")
+    public void setTenant(Integer tenant) {
+        this.tenant = tenant;
     }
 
 }
