@@ -2,6 +2,7 @@
 package com.github.libgraviton.gdk.gravitondyn.file.document;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -18,8 +19,10 @@ import com.github.libgraviton.gdk.data.GravitonBase;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "metadata",
+    "deletedDate",
     "links",
-    "id"
+    "id",
+    "tenant"
 })
 public class File implements GravitonBase
 {
@@ -32,6 +35,14 @@ public class File implements GravitonBase
     @JsonProperty("metadata")
     private FileMetadata metadata;
     /**
+     * 
+     * 
+     * 
+     */
+    @JsonProperty("deletedDate")
+    @JsonPropertyDescription("")
+    private Date deletedDate;
+    /**
      * Links
      * todo replace me
      * 
@@ -42,11 +53,20 @@ public class File implements GravitonBase
     /**
      * ID
      * Unique identifier
+     * (Required)
      * 
      */
     @JsonProperty("id")
     @JsonPropertyDescription("")
     private String id;
+    /**
+     * 
+     * 
+     * 
+     */
+    @JsonProperty("tenant")
+    @JsonPropertyDescription("")
+    private Integer tenant;
 
     /**
      * Metadata
@@ -70,6 +90,30 @@ public class File implements GravitonBase
     @JsonProperty("metadata")
     public void setMetadata(FileMetadata metadata) {
         this.metadata = metadata;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @return
+     *     The deletedDate
+     */
+    @JsonProperty("deletedDate")
+    public Date getDeletedDate() {
+        return deletedDate;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @param deletedDate
+     *     The deletedDate
+     */
+    @JsonProperty("deletedDate")
+    public void setDeletedDate(Date deletedDate) {
+        this.deletedDate = deletedDate;
     }
 
     /**
@@ -99,6 +143,7 @@ public class File implements GravitonBase
     /**
      * ID
      * Unique identifier
+     * (Required)
      * 
      * @return
      *     The id
@@ -111,6 +156,7 @@ public class File implements GravitonBase
     /**
      * ID
      * Unique identifier
+     * (Required)
      * 
      * @param id
      *     The id
@@ -118,6 +164,30 @@ public class File implements GravitonBase
     @JsonProperty("id")
     public void setId(String id) {
         this.id = id;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @return
+     *     The tenant
+     */
+    @JsonProperty("tenant")
+    public Integer getTenant() {
+        return tenant;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @param tenant
+     *     The tenant
+     */
+    @JsonProperty("tenant")
+    public void setTenant(Integer tenant) {
+        this.tenant = tenant;
     }
 
 }

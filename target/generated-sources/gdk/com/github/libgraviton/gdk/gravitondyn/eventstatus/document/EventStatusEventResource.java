@@ -1,6 +1,7 @@
 
 package com.github.libgraviton.gdk.gravitondyn.eventstatus.document;
 
+import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
@@ -14,10 +15,20 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "$ref"
+    "deletedDate",
+    "$ref",
+    "tenant"
 })
 public class EventStatusEventResource {
 
+    /**
+     * 
+     * 
+     * 
+     */
+    @JsonProperty("deletedDate")
+    @JsonPropertyDescription("")
+    private Date deletedDate;
     /**
      * Ref to event resource
      * A $ref pointing to the resource that triggered this event. If the resource was deleted, it may not exist anymore.
@@ -26,6 +37,38 @@ public class EventStatusEventResource {
     @JsonProperty("$ref")
     @JsonPropertyDescription("")
     private String $ref;
+    /**
+     * 
+     * 
+     * 
+     */
+    @JsonProperty("tenant")
+    @JsonPropertyDescription("")
+    private Integer tenant;
+
+    /**
+     * 
+     * 
+     * 
+     * @return
+     *     The deletedDate
+     */
+    @JsonProperty("deletedDate")
+    public Date getDeletedDate() {
+        return deletedDate;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @param deletedDate
+     *     The deletedDate
+     */
+    @JsonProperty("deletedDate")
+    public void setDeletedDate(Date deletedDate) {
+        this.deletedDate = deletedDate;
+    }
 
     /**
      * Ref to event resource
@@ -49,6 +92,30 @@ public class EventStatusEventResource {
     @JsonProperty("$ref")
     public void set$ref(String $ref) {
         this.$ref = $ref;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @return
+     *     The tenant
+     */
+    @JsonProperty("tenant")
+    public Integer getTenant() {
+        return tenant;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @param tenant
+     *     The tenant
+     */
+    @JsonProperty("tenant")
+    public void setTenant(Integer tenant) {
+        this.tenant = tenant;
     }
 
 }

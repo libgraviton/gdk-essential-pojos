@@ -18,17 +18,27 @@ import com.github.libgraviton.gdk.data.GravitonBase;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
+    "deletedDate",
     "eventName",
     "information",
     "id",
     "userId",
     "eventResource",
+    "tenant",
     "createDate",
     "status"
 })
 public class EventStatus implements GravitonBase
 {
 
+    /**
+     * 
+     * 
+     * 
+     */
+    @JsonProperty("deletedDate")
+    @JsonPropertyDescription("")
+    private Date deletedDate;
     /**
      * Event Name
      * Name of the created event
@@ -48,6 +58,7 @@ public class EventStatus implements GravitonBase
     /**
      * ID
      * Unique identifier
+     * (Required)
      * 
      */
     @JsonProperty("id")
@@ -69,6 +80,14 @@ public class EventStatus implements GravitonBase
     @JsonProperty("eventResource")
     private EventStatusEventResource eventResource;
     /**
+     * 
+     * 
+     * 
+     */
+    @JsonProperty("tenant")
+    @JsonPropertyDescription("")
+    private Integer tenant;
+    /**
      * Creation date
      * Creation date
      * 
@@ -84,6 +103,30 @@ public class EventStatus implements GravitonBase
     @JsonProperty("status")
     @JsonPropertyDescription("")
     private List<EventStatusStatus> status = new ArrayList<EventStatusStatus>();
+
+    /**
+     * 
+     * 
+     * 
+     * @return
+     *     The deletedDate
+     */
+    @JsonProperty("deletedDate")
+    public Date getDeletedDate() {
+        return deletedDate;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @param deletedDate
+     *     The deletedDate
+     */
+    @JsonProperty("deletedDate")
+    public void setDeletedDate(Date deletedDate) {
+        this.deletedDate = deletedDate;
+    }
 
     /**
      * Event Name
@@ -136,6 +179,7 @@ public class EventStatus implements GravitonBase
     /**
      * ID
      * Unique identifier
+     * (Required)
      * 
      * @return
      *     The id
@@ -148,6 +192,7 @@ public class EventStatus implements GravitonBase
     /**
      * ID
      * Unique identifier
+     * (Required)
      * 
      * @param id
      *     The id
@@ -203,6 +248,30 @@ public class EventStatus implements GravitonBase
     @JsonProperty("eventResource")
     public void setEventResource(EventStatusEventResource eventResource) {
         this.eventResource = eventResource;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @return
+     *     The tenant
+     */
+    @JsonProperty("tenant")
+    public Integer getTenant() {
+        return tenant;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @param tenant
+     *     The tenant
+     */
+    @JsonProperty("tenant")
+    public void setTenant(Integer tenant) {
+        this.tenant = tenant;
     }
 
     /**

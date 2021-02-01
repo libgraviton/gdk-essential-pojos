@@ -1,6 +1,7 @@
 
 package com.github.libgraviton.gdk.gravitondyn.eventstatus.document;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -19,9 +20,12 @@ import com.fasterxml.jackson.annotation.JsonValue;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "workerId",
+    "deletedDate",
+    "id",
     "type",
     "$ref",
-    "content"
+    "content",
+    "tenant"
 })
 public class EventStatusInformation {
 
@@ -34,6 +38,22 @@ public class EventStatusInformation {
     @JsonProperty("workerId")
     @JsonPropertyDescription("")
     private String workerId;
+    /**
+     * 
+     * 
+     * 
+     */
+    @JsonProperty("deletedDate")
+    @JsonPropertyDescription("")
+    private Date deletedDate;
+    /**
+     * ID
+     * Unique identifier
+     * 
+     */
+    @JsonProperty("id")
+    @JsonPropertyDescription("")
+    private String id;
     /**
      * Information type
      * The type of information the worker published
@@ -60,6 +80,14 @@ public class EventStatusInformation {
     @JsonProperty("content")
     @JsonPropertyDescription("")
     private String content;
+    /**
+     * 
+     * 
+     * 
+     */
+    @JsonProperty("tenant")
+    @JsonPropertyDescription("")
+    private Integer tenant;
 
     /**
      * Worker ID
@@ -85,6 +113,54 @@ public class EventStatusInformation {
     @JsonProperty("workerId")
     public void setWorkerId(String workerId) {
         this.workerId = workerId;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @return
+     *     The deletedDate
+     */
+    @JsonProperty("deletedDate")
+    public Date getDeletedDate() {
+        return deletedDate;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @param deletedDate
+     *     The deletedDate
+     */
+    @JsonProperty("deletedDate")
+    public void setDeletedDate(Date deletedDate) {
+        this.deletedDate = deletedDate;
+    }
+
+    /**
+     * ID
+     * Unique identifier
+     * 
+     * @return
+     *     The id
+     */
+    @JsonProperty("id")
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * ID
+     * Unique identifier
+     * 
+     * @param id
+     *     The id
+     */
+    @JsonProperty("id")
+    public void setId(String id) {
+        this.id = id;
     }
 
     /**
@@ -161,6 +237,30 @@ public class EventStatusInformation {
     @JsonProperty("content")
     public void setContent(String content) {
         this.content = content;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @return
+     *     The tenant
+     */
+    @JsonProperty("tenant")
+    public Integer getTenant() {
+        return tenant;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @param tenant
+     *     The tenant
+     */
+    @JsonProperty("tenant")
+    public void setTenant(Integer tenant) {
+        this.tenant = tenant;
     }
 
     public enum Type {

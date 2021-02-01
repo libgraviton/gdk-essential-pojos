@@ -2,6 +2,7 @@
 package com.github.libgraviton.gdk.gravitondyn.eventworker.document;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -17,12 +18,22 @@ import com.github.libgraviton.gdk.data.GravitonBase;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
+    "deletedDate",
     "id",
-    "subscription"
+    "subscription",
+    "tenant"
 })
 public class EventWorker implements GravitonBase
 {
 
+    /**
+     * 
+     * 
+     * 
+     */
+    @JsonProperty("deletedDate")
+    @JsonPropertyDescription("")
+    private Date deletedDate;
     /**
      * ID
      * Unique identifier
@@ -40,6 +51,38 @@ public class EventWorker implements GravitonBase
     @JsonProperty("subscription")
     @JsonPropertyDescription("")
     private List<EventWorkerSubscription> subscription = new ArrayList<EventWorkerSubscription>();
+    /**
+     * 
+     * 
+     * 
+     */
+    @JsonProperty("tenant")
+    @JsonPropertyDescription("")
+    private Integer tenant;
+
+    /**
+     * 
+     * 
+     * 
+     * @return
+     *     The deletedDate
+     */
+    @JsonProperty("deletedDate")
+    public Date getDeletedDate() {
+        return deletedDate;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @param deletedDate
+     *     The deletedDate
+     */
+    @JsonProperty("deletedDate")
+    public void setDeletedDate(Date deletedDate) {
+        this.deletedDate = deletedDate;
+    }
 
     /**
      * ID
@@ -89,6 +132,30 @@ public class EventWorker implements GravitonBase
     @JsonProperty("subscription")
     public void setSubscription(List<EventWorkerSubscription> subscription) {
         this.subscription = subscription;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @return
+     *     The tenant
+     */
+    @JsonProperty("tenant")
+    public Integer getTenant() {
+        return tenant;
+    }
+
+    /**
+     * 
+     * 
+     * 
+     * @param tenant
+     *     The tenant
+     */
+    @JsonProperty("tenant")
+    public void setTenant(Integer tenant) {
+        this.tenant = tenant;
     }
 
 }
