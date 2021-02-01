@@ -18,6 +18,14 @@
         </license>
     </licenses>
 
+    <distributionManagement>
+        <repository>
+            <id>bintray-libgraviton-maven</id>
+            <name>libgraviton-maven</name>
+            <url>https://api.bintray.com/maven/libgraviton/maven/gdk-essential-pojos/;publish=1</url>
+        </repository>
+    </distributionManagement>
+
     <developers>
         <developer>
             <name>GitHub Contributors</name>
@@ -117,17 +125,6 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.3</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <serverId>ossrh</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                </configuration>
             </plugin>
         </plugins>
     </build>
