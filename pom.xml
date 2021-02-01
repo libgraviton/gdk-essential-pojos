@@ -6,7 +6,7 @@
 
     <groupId>com.github.libgraviton</groupId>
     <artifactId>gdk-essential-pojos</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>gdk-essential-pojos</name>
     <description>Essential POJOs for the GDK</description>
     <url>https://github.com/libgraviton/gdk-essential-pojos</url>
