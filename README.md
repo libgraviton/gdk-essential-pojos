@@ -1,7 +1,5 @@
 # gdk-essential-pojos
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.libgraviton/gdk-essential-pojos/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.libgraviton/gdk-essential-pojos)
-
 ## What is it
 
 Based on [gdk-java](https://github.com/libgraviton/gdk-java) this repository provides the essential POJOs that are needed for the [worker-base](https://github.com/libgraviton/graviton-worker-base-java) to work with the gdk integration.
