@@ -6,7 +6,7 @@
 
     <groupId>com.github.libgraviton</groupId>
     <artifactId>gdk-essential-pojos</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.1.0-SNAPSHOT</version>
     <name>gdk-essential-pojos</name>
     <description>Essential POJOs for the GDK</description>
     <url>https://github.com/libgraviton/gdk-essential-pojos</url>
@@ -18,13 +18,11 @@
         </license>
     </licenses>
 
-    <distributionManagement>
-        <repository>
-            <id>bintray-libgraviton-maven</id>
-            <name>libgraviton-maven</name>
-            <url>https://api.bintray.com/maven/libgraviton/maven/gdk-essential-pojos/;publish=1</url>
-        </repository>
-    </distributionManagement>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
 
     <developers>
         <developer>
@@ -33,15 +31,31 @@
         </developer>
     </developers>
 
+    <repositories>
+        <repository>
+            <id>libgraviton-github</id>
+            <url>https://maven.pkg.github.com/libgraviton/gdk-java</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>libgraviton-github</id>
+            <url>https://maven.pkg.github.com/libgraviton/gdk-java</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </distributionManagement>
+
     <scm>
         <connection>scm:git:git@github.com:libgraviton/gdk-essential-pojos.git</connection>
         <developerConnection>scm:git:git@github.com:libgraviton/gdk-essential-pojos.git</developerConnection>
         <url>git@github.com:libgraviton/gdk-essential-pojos.git</url>
     </scm>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -53,7 +67,7 @@
         <dependency>
             <groupId>com.github.libgraviton</groupId>
             <artifactId>worker-base</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>3.4.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -70,17 +84,16 @@
             <plugin>
                 <groupId>com.github.libgraviton</groupId>
                 <artifactId>gdk-maven-plugin</artifactId>
-                <version>0.10.0</version>
+                <version>1.1.0</version>
                 <configuration>
-                    <gravitonUrl>enter-url-to-running-graviton-instance</gravitonUrl>
+                    <gravitonUrl>http://localhost:8000</gravitonUrl>
                     <endpointWhitelistPath>src/main/resources/endpoint.whitelist</endpointWhitelistPath>
                     <generatorConfig>
                         <includeHashcodeAndEquals>false</includeHashcodeAndEquals>
                         <includeToString>false</includeToString>
-                        <useContextualClassNames>true</useContextualClassNames>
                         <outputDirectory>${basedir}/target/generated-sources/gdk</outputDirectory>
                         <targetPackage>com.github.libgraviton.gdk</targetPackage>
-                        <customRuleFactory>org.jsonschema2pojo.rules.GravitonRuleFactory</customRuleFactory>
+                        <customRuleFactory>com.github.libgraviton.gdk.generator.rules.GravitonRuleFactory</customRuleFactory>
                     </generatorConfig>
                 </configuration>
                 <executions>
@@ -95,7 +108,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
-                <version>1.12</version>
+                <version>3.3.0</version>
                 <executions>
                     <execution>
                         <id>generate-sources</id>
@@ -119,44 +132,42 @@
                             <resources>
                                 <resource>
                                     <directory>${project.build.directory}/generated-sources/gdk-java</directory>
-                                    <targetPath>target/generated-sources/gdk-java</targetPath>
+                                    <!--
+                                    We need to make sure 'targetPath' differs from the config in https://github.com/libgraviton/gdk-essential-pojos.
+                                    The reason behind this, is how the resource loading works and the resources from gdk-essential-pojos will always
+                                    be preferred to the resources from this project.-->
+                                    <targetPath>target/generated-sources/gdk-resources</targetPath>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-resources2</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>add-resource</goal>
+                        </goals>
+                        <configuration>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.directory}/generated-sources/gdk/gdk-resources</directory>
+                                    <targetPath>${project.build.outputDirectory}/gdk-resources</targetPath>
                                 </resource>
                             </resources>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>release-sign-artifacts</id>
-            <activation>
-                <property>
-                    <name>performRelease</name>
-                    <value>true</value>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.5</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 
 </project>
