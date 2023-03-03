@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.github.libgraviton.gdk.data.GravitonBase;
+import com.github.libgraviton.workerbase.gdk.data.GravitonBase;
 
 
 /**
@@ -18,13 +18,11 @@ import com.github.libgraviton.gdk.data.GravitonBase;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "deletedDate",
     "eventName",
     "information",
     "id",
     "userId",
     "eventResource",
-    "tenant",
     "createDate",
     "status"
 })
@@ -32,20 +30,12 @@ public class EventStatus implements GravitonBase
 {
 
     /**
-     * 
-     * 
-     * 
-     */
-    @JsonProperty("deletedDate")
-    @JsonPropertyDescription("")
-    private Date deletedDate;
-    /**
      * Event Name
      * Name of the created event
      * 
      */
     @JsonProperty("eventName")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("Name of the created event")
     private String eventName;
     /**
      * Information
@@ -53,7 +43,7 @@ public class EventStatus implements GravitonBase
      * 
      */
     @JsonProperty("information")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("@todo replace me")
     private List<EventStatusInformation> information = new ArrayList<EventStatusInformation>();
     /**
      * ID
@@ -62,7 +52,7 @@ public class EventStatus implements GravitonBase
      * 
      */
     @JsonProperty("id")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("Unique identifier")
     private String id;
     /**
      * User Identifier
@@ -70,7 +60,7 @@ public class EventStatus implements GravitonBase
      * 
      */
     @JsonProperty("userId")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("User who created the event entry")
     private String userId;
     /**
      * EventResource
@@ -80,20 +70,12 @@ public class EventStatus implements GravitonBase
     @JsonProperty("eventResource")
     private EventStatusEventResource eventResource;
     /**
-     * 
-     * 
-     * 
-     */
-    @JsonProperty("tenant")
-    @JsonPropertyDescription("")
-    private Integer tenant;
-    /**
      * Creation date
      * Creation date
      * 
      */
     @JsonProperty("createDate")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("Creation date")
     private Date createDate;
     /**
      * Status
@@ -101,39 +83,13 @@ public class EventStatus implements GravitonBase
      * 
      */
     @JsonProperty("status")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("@todo replace me")
     private List<EventStatusStatus> status = new ArrayList<EventStatusStatus>();
-
-    /**
-     * 
-     * 
-     * 
-     * @return
-     *     The deletedDate
-     */
-    @JsonProperty("deletedDate")
-    public Date getDeletedDate() {
-        return deletedDate;
-    }
-
-    /**
-     * 
-     * 
-     * 
-     * @param deletedDate
-     *     The deletedDate
-     */
-    @JsonProperty("deletedDate")
-    public void setDeletedDate(Date deletedDate) {
-        this.deletedDate = deletedDate;
-    }
 
     /**
      * Event Name
      * Name of the created event
      * 
-     * @return
-     *     The eventName
      */
     @JsonProperty("eventName")
     public String getEventName() {
@@ -144,8 +100,6 @@ public class EventStatus implements GravitonBase
      * Event Name
      * Name of the created event
      * 
-     * @param eventName
-     *     The eventName
      */
     @JsonProperty("eventName")
     public void setEventName(String eventName) {
@@ -156,8 +110,6 @@ public class EventStatus implements GravitonBase
      * Information
      * todo replace me
      * 
-     * @return
-     *     The information
      */
     @JsonProperty("information")
     public List<EventStatusInformation> getInformation() {
@@ -168,8 +120,6 @@ public class EventStatus implements GravitonBase
      * Information
      * todo replace me
      * 
-     * @param information
-     *     The information
      */
     @JsonProperty("information")
     public void setInformation(List<EventStatusInformation> information) {
@@ -181,8 +131,6 @@ public class EventStatus implements GravitonBase
      * Unique identifier
      * (Required)
      * 
-     * @return
-     *     The id
      */
     @JsonProperty("id")
     public String getId() {
@@ -194,8 +142,6 @@ public class EventStatus implements GravitonBase
      * Unique identifier
      * (Required)
      * 
-     * @param id
-     *     The id
      */
     @JsonProperty("id")
     public void setId(String id) {
@@ -206,8 +152,6 @@ public class EventStatus implements GravitonBase
      * User Identifier
      * User who created the event entry
      * 
-     * @return
-     *     The userId
      */
     @JsonProperty("userId")
     public String getUserId() {
@@ -218,8 +162,6 @@ public class EventStatus implements GravitonBase
      * User Identifier
      * User who created the event entry
      * 
-     * @param userId
-     *     The userId
      */
     @JsonProperty("userId")
     public void setUserId(String userId) {
@@ -230,8 +172,6 @@ public class EventStatus implements GravitonBase
      * EventResource
      * 
      * 
-     * @return
-     *     The eventResource
      */
     @JsonProperty("eventResource")
     public EventStatusEventResource getEventResource() {
@@ -242,8 +182,6 @@ public class EventStatus implements GravitonBase
      * EventResource
      * 
      * 
-     * @param eventResource
-     *     The eventResource
      */
     @JsonProperty("eventResource")
     public void setEventResource(EventStatusEventResource eventResource) {
@@ -251,35 +189,9 @@ public class EventStatus implements GravitonBase
     }
 
     /**
-     * 
-     * 
-     * 
-     * @return
-     *     The tenant
-     */
-    @JsonProperty("tenant")
-    public Integer getTenant() {
-        return tenant;
-    }
-
-    /**
-     * 
-     * 
-     * 
-     * @param tenant
-     *     The tenant
-     */
-    @JsonProperty("tenant")
-    public void setTenant(Integer tenant) {
-        this.tenant = tenant;
-    }
-
-    /**
      * Creation date
      * Creation date
      * 
-     * @return
-     *     The createDate
      */
     @JsonProperty("createDate")
     public Date getCreateDate() {
@@ -290,8 +202,6 @@ public class EventStatus implements GravitonBase
      * Creation date
      * Creation date
      * 
-     * @param createDate
-     *     The createDate
      */
     @JsonProperty("createDate")
     public void setCreateDate(Date createDate) {
@@ -302,8 +212,6 @@ public class EventStatus implements GravitonBase
      * Status
      * todo replace me
      * 
-     * @return
-     *     The status
      */
     @JsonProperty("status")
     public List<EventStatusStatus> getStatus() {
@@ -314,8 +222,6 @@ public class EventStatus implements GravitonBase
      * Status
      * todo replace me
      * 
-     * @param status
-     *     The status
      */
     @JsonProperty("status")
     public void setStatus(List<EventStatusStatus> status) {
