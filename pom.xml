@@ -91,6 +91,7 @@
                     <generatorConfig>
                         <includeHashcodeAndEquals>false</includeHashcodeAndEquals>
                         <includeToString>false</includeToString>
+                        <includeGeneratedAnnotation>false</includeGeneratedAnnotation>
                         <outputDirectory>${basedir}/target/generated-sources/gdk</outputDirectory>
                         <targetPackage>com.github.libgraviton.gdk</targetPackage>
                         <customRuleFactory>com.github.libgraviton.gdk.generator.rules.GravitonRuleFactory</customRuleFactory>
