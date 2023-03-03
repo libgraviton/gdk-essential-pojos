@@ -1,7 +1,6 @@
 
 package com.github.libgraviton.gdk.gravitondyn.eventstatus.document;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -20,10 +19,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "workerId",
-    "deletedDate",
     "action",
-    "id",
-    "tenant",
     "status"
 })
 public class EventStatusStatus {
@@ -35,16 +31,8 @@ public class EventStatusStatus {
      * 
      */
     @JsonProperty("workerId")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("ID of a worker")
     private String workerId;
-    /**
-     * 
-     * 
-     * 
-     */
-    @JsonProperty("deletedDate")
-    @JsonPropertyDescription("")
-    private Date deletedDate;
     /**
      * Action
      * 
@@ -53,29 +41,13 @@ public class EventStatusStatus {
     @JsonProperty("action")
     private EventStatusStatusAction action;
     /**
-     * ID
-     * Unique identifier
-     * 
-     */
-    @JsonProperty("id")
-    @JsonPropertyDescription("")
-    private String id;
-    /**
-     * 
-     * 
-     * 
-     */
-    @JsonProperty("tenant")
-    @JsonPropertyDescription("")
-    private Integer tenant;
-    /**
      * Status
      * A string representing the status (opened, working, failed, done)
      * (Required)
      * 
      */
     @JsonProperty("status")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("A string representing the status (opened, working, failed, done)")
     private EventStatusStatus.Status status;
 
     /**
@@ -83,8 +55,6 @@ public class EventStatusStatus {
      * ID of a worker
      * (Required)
      * 
-     * @return
-     *     The workerId
      */
     @JsonProperty("workerId")
     public String getWorkerId() {
@@ -96,8 +66,6 @@ public class EventStatusStatus {
      * ID of a worker
      * (Required)
      * 
-     * @param workerId
-     *     The workerId
      */
     @JsonProperty("workerId")
     public void setWorkerId(String workerId) {
@@ -105,35 +73,9 @@ public class EventStatusStatus {
     }
 
     /**
-     * 
-     * 
-     * 
-     * @return
-     *     The deletedDate
-     */
-    @JsonProperty("deletedDate")
-    public Date getDeletedDate() {
-        return deletedDate;
-    }
-
-    /**
-     * 
-     * 
-     * 
-     * @param deletedDate
-     *     The deletedDate
-     */
-    @JsonProperty("deletedDate")
-    public void setDeletedDate(Date deletedDate) {
-        this.deletedDate = deletedDate;
-    }
-
-    /**
      * Action
      * 
      * 
-     * @return
-     *     The action
      */
     @JsonProperty("action")
     public EventStatusStatusAction getAction() {
@@ -144,8 +86,6 @@ public class EventStatusStatus {
      * Action
      * 
      * 
-     * @param action
-     *     The action
      */
     @JsonProperty("action")
     public void setAction(EventStatusStatusAction action) {
@@ -153,60 +93,10 @@ public class EventStatusStatus {
     }
 
     /**
-     * ID
-     * Unique identifier
-     * 
-     * @return
-     *     The id
-     */
-    @JsonProperty("id")
-    public String getId() {
-        return id;
-    }
-
-    /**
-     * ID
-     * Unique identifier
-     * 
-     * @param id
-     *     The id
-     */
-    @JsonProperty("id")
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    /**
-     * 
-     * 
-     * 
-     * @return
-     *     The tenant
-     */
-    @JsonProperty("tenant")
-    public Integer getTenant() {
-        return tenant;
-    }
-
-    /**
-     * 
-     * 
-     * 
-     * @param tenant
-     *     The tenant
-     */
-    @JsonProperty("tenant")
-    public void setTenant(Integer tenant) {
-        this.tenant = tenant;
-    }
-
-    /**
      * Status
      * A string representing the status (opened, working, failed, done)
      * (Required)
      * 
-     * @return
-     *     The status
      */
     @JsonProperty("status")
     public EventStatusStatus.Status getStatus() {
@@ -218,14 +108,18 @@ public class EventStatusStatus {
      * A string representing the status (opened, working, failed, done)
      * (Required)
      * 
-     * @param status
-     *     The status
      */
     @JsonProperty("status")
     public void setStatus(EventStatusStatus.Status status) {
         this.status = status;
     }
 
+
+    /**
+     * Status
+     * A string representing the status (opened, working, failed, done)
+     * 
+     */
     public enum Status {
 
         OPENED("opened"),
@@ -242,7 +136,7 @@ public class EventStatusStatus {
             }
         }
 
-        private Status(String value) {
+        Status(String value) {
             this.value = value;
         }
 

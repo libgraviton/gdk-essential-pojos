@@ -1,7 +1,6 @@
 
 package com.github.libgraviton.gdk.gravitondyn.eventstatus.document;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -20,12 +19,9 @@ import com.fasterxml.jackson.annotation.JsonValue;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "workerId",
-    "deletedDate",
-    "id",
     "type",
     "$ref",
-    "content",
-    "tenant"
+    "content"
 })
 public class EventStatusInformation {
 
@@ -36,24 +32,8 @@ public class EventStatusInformation {
      * 
      */
     @JsonProperty("workerId")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("ID of a worker")
     private String workerId;
-    /**
-     * 
-     * 
-     * 
-     */
-    @JsonProperty("deletedDate")
-    @JsonPropertyDescription("")
-    private Date deletedDate;
-    /**
-     * ID
-     * Unique identifier
-     * 
-     */
-    @JsonProperty("id")
-    @JsonPropertyDescription("")
-    private String id;
     /**
      * Information type
      * The type of information the worker published
@@ -61,7 +41,7 @@ public class EventStatusInformation {
      * 
      */
     @JsonProperty("type")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("The type of information the worker published")
     private EventStatusInformation.Type type;
     /**
      * Ref
@@ -69,7 +49,7 @@ public class EventStatusInformation {
      * 
      */
     @JsonProperty("$ref")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("An optional $ref that can be written by the worker")
     private String $ref;
     /**
      * Worker output
@@ -78,24 +58,14 @@ public class EventStatusInformation {
      * 
      */
     @JsonProperty("content")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("A place where a worker can put any information content")
     private String content;
-    /**
-     * 
-     * 
-     * 
-     */
-    @JsonProperty("tenant")
-    @JsonPropertyDescription("")
-    private Integer tenant;
 
     /**
      * Worker ID
      * ID of a worker
      * (Required)
      * 
-     * @return
-     *     The workerId
      */
     @JsonProperty("workerId")
     public String getWorkerId() {
@@ -107,8 +77,6 @@ public class EventStatusInformation {
      * ID of a worker
      * (Required)
      * 
-     * @param workerId
-     *     The workerId
      */
     @JsonProperty("workerId")
     public void setWorkerId(String workerId) {
@@ -116,60 +84,10 @@ public class EventStatusInformation {
     }
 
     /**
-     * 
-     * 
-     * 
-     * @return
-     *     The deletedDate
-     */
-    @JsonProperty("deletedDate")
-    public Date getDeletedDate() {
-        return deletedDate;
-    }
-
-    /**
-     * 
-     * 
-     * 
-     * @param deletedDate
-     *     The deletedDate
-     */
-    @JsonProperty("deletedDate")
-    public void setDeletedDate(Date deletedDate) {
-        this.deletedDate = deletedDate;
-    }
-
-    /**
-     * ID
-     * Unique identifier
-     * 
-     * @return
-     *     The id
-     */
-    @JsonProperty("id")
-    public String getId() {
-        return id;
-    }
-
-    /**
-     * ID
-     * Unique identifier
-     * 
-     * @param id
-     *     The id
-     */
-    @JsonProperty("id")
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    /**
      * Information type
      * The type of information the worker published
      * (Required)
      * 
-     * @return
-     *     The type
      */
     @JsonProperty("type")
     public EventStatusInformation.Type getType() {
@@ -181,8 +99,6 @@ public class EventStatusInformation {
      * The type of information the worker published
      * (Required)
      * 
-     * @param type
-     *     The type
      */
     @JsonProperty("type")
     public void setType(EventStatusInformation.Type type) {
@@ -193,8 +109,6 @@ public class EventStatusInformation {
      * Ref
      * An optional $ref that can be written by the worker
      * 
-     * @return
-     *     The $ref
      */
     @JsonProperty("$ref")
     public String get$ref() {
@@ -205,8 +119,6 @@ public class EventStatusInformation {
      * Ref
      * An optional $ref that can be written by the worker
      * 
-     * @param $ref
-     *     The $ref
      */
     @JsonProperty("$ref")
     public void set$ref(String $ref) {
@@ -218,8 +130,6 @@ public class EventStatusInformation {
      * A place where a worker can put any information content
      * (Required)
      * 
-     * @return
-     *     The content
      */
     @JsonProperty("content")
     public String getContent() {
@@ -231,38 +141,18 @@ public class EventStatusInformation {
      * A place where a worker can put any information content
      * (Required)
      * 
-     * @param content
-     *     The content
      */
     @JsonProperty("content")
     public void setContent(String content) {
         this.content = content;
     }
 
-    /**
-     * 
-     * 
-     * 
-     * @return
-     *     The tenant
-     */
-    @JsonProperty("tenant")
-    public Integer getTenant() {
-        return tenant;
-    }
 
     /**
+     * Information type
+     * The type of information the worker published
      * 
-     * 
-     * 
-     * @param tenant
-     *     The tenant
      */
-    @JsonProperty("tenant")
-    public void setTenant(Integer tenant) {
-        this.tenant = tenant;
-    }
-
     public enum Type {
 
         DEBUG("debug"),
@@ -278,7 +168,7 @@ public class EventStatusInformation {
             }
         }
 
-        private Type(String value) {
+        Type(String value) {
             this.value = value;
         }
 

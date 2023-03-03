@@ -22,17 +22,15 @@ import com.fasterxml.jackson.annotation.JsonValue;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "additionalInformation",
-    "mime",
-    "language",
     "modificationDate",
     "filename",
     "size",
-    "deletedDate",
+    "isSigned",
+    "mime",
     "action",
-    "id",
+    "language",
     "additionalProperties",
     "hash",
-    "tenant",
     "createDate",
     "order"
 })
@@ -44,31 +42,15 @@ public class FileMetadata {
      * 
      */
     @JsonProperty("additionalInformation")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("Additional information for this file.")
     private String additionalInformation;
-    /**
-     * MIME Type
-     * MIME-Type of file.
-     * 
-     */
-    @JsonProperty("mime")
-    @JsonPropertyDescription("")
-    private String mime;
-    /**
-     * Language Iso
-     * Short language iso code, in lowercase.
-     * 
-     */
-    @JsonProperty("language")
-    @JsonPropertyDescription("")
-    private FileMetadata.Language language;
     /**
      * Modification date
      * Timestamp of the last file change.
      * 
      */
     @JsonProperty("modificationDate")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("Timestamp of the last file change.")
     private Date modificationDate;
     /**
      * File name
@@ -76,7 +58,7 @@ public class FileMetadata {
      * 
      */
     @JsonProperty("filename")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("Name of the file as it should get displayed to the user.")
     private String filename;
     /**
      * File size
@@ -84,39 +66,47 @@ public class FileMetadata {
      * 
      */
     @JsonProperty("size")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("Size of file.")
     private Integer size;
     /**
-     * 
-     * 
+     * Is Signed
+     * Defines if the file is digitally signed
      * 
      */
-    @JsonProperty("deletedDate")
-    @JsonPropertyDescription("")
-    private Date deletedDate;
+    @JsonProperty("isSigned")
+    @JsonPropertyDescription("Defines if the file is digitally signed")
+    private Boolean isSigned;
+    /**
+     * MIME Type
+     * MIME-Type of file.
+     * 
+     */
+    @JsonProperty("mime")
+    @JsonPropertyDescription("MIME-Type of file.")
+    private String mime;
     /**
      * Action
      * todo replace me
      * 
      */
     @JsonProperty("action")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("@todo replace me")
     private List<FileMetadataAction> action = new ArrayList<FileMetadataAction>();
     /**
-     * ID
-     * Unique identifier
+     * Language Iso
+     * Short language iso code, in lowercase.
      * 
      */
-    @JsonProperty("id")
-    @JsonPropertyDescription("")
-    private String id;
+    @JsonProperty("language")
+    @JsonPropertyDescription("Short language iso code, in lowercase.")
+    private FileMetadata.Language language;
     /**
      * Additional properties
      * todo replace me
      * 
      */
     @JsonProperty("additionalProperties")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("@todo replace me")
     private List<FileMetadataAdditionalProperties> additionalProperties = new ArrayList<FileMetadataAdditionalProperties>();
     /**
      * Unique file content hash value
@@ -124,23 +114,15 @@ public class FileMetadata {
      * 
      */
     @JsonProperty("hash")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("File content hash encoded sha256")
     private String hash;
-    /**
-     * 
-     * 
-     * 
-     */
-    @JsonProperty("tenant")
-    @JsonPropertyDescription("")
-    private Integer tenant;
     /**
      * Creation date
      * Timestamp of file upload.
      * 
      */
     @JsonProperty("createDate")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("Timestamp of file upload.")
     private Date createDate;
     /**
      * order information if needed by client
@@ -148,15 +130,13 @@ public class FileMetadata {
      * 
      */
     @JsonProperty("order")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("can be set by clients to persist a specific order to display files")
     private Integer order;
 
     /**
      * Additional Information
      * Additional information for this file.
      * 
-     * @return
-     *     The additionalInformation
      */
     @JsonProperty("additionalInformation")
     public String getAdditionalInformation() {
@@ -167,8 +147,6 @@ public class FileMetadata {
      * Additional Information
      * Additional information for this file.
      * 
-     * @param additionalInformation
-     *     The additionalInformation
      */
     @JsonProperty("additionalInformation")
     public void setAdditionalInformation(String additionalInformation) {
@@ -176,59 +154,9 @@ public class FileMetadata {
     }
 
     /**
-     * MIME Type
-     * MIME-Type of file.
-     * 
-     * @return
-     *     The mime
-     */
-    @JsonProperty("mime")
-    public String getMime() {
-        return mime;
-    }
-
-    /**
-     * MIME Type
-     * MIME-Type of file.
-     * 
-     * @param mime
-     *     The mime
-     */
-    @JsonProperty("mime")
-    public void setMime(String mime) {
-        this.mime = mime;
-    }
-
-    /**
-     * Language Iso
-     * Short language iso code, in lowercase.
-     * 
-     * @return
-     *     The language
-     */
-    @JsonProperty("language")
-    public FileMetadata.Language getLanguage() {
-        return language;
-    }
-
-    /**
-     * Language Iso
-     * Short language iso code, in lowercase.
-     * 
-     * @param language
-     *     The language
-     */
-    @JsonProperty("language")
-    public void setLanguage(FileMetadata.Language language) {
-        this.language = language;
-    }
-
-    /**
      * Modification date
      * Timestamp of the last file change.
      * 
-     * @return
-     *     The modificationDate
      */
     @JsonProperty("modificationDate")
     public Date getModificationDate() {
@@ -239,8 +167,6 @@ public class FileMetadata {
      * Modification date
      * Timestamp of the last file change.
      * 
-     * @param modificationDate
-     *     The modificationDate
      */
     @JsonProperty("modificationDate")
     public void setModificationDate(Date modificationDate) {
@@ -251,8 +177,6 @@ public class FileMetadata {
      * File name
      * Name of the file as it should get displayed to the user.
      * 
-     * @return
-     *     The filename
      */
     @JsonProperty("filename")
     public String getFilename() {
@@ -263,8 +187,6 @@ public class FileMetadata {
      * File name
      * Name of the file as it should get displayed to the user.
      * 
-     * @param filename
-     *     The filename
      */
     @JsonProperty("filename")
     public void setFilename(String filename) {
@@ -275,8 +197,6 @@ public class FileMetadata {
      * File size
      * Size of file.
      * 
-     * @return
-     *     The size
      */
     @JsonProperty("size")
     public Integer getSize() {
@@ -287,8 +207,6 @@ public class FileMetadata {
      * File size
      * Size of file.
      * 
-     * @param size
-     *     The size
      */
     @JsonProperty("size")
     public void setSize(Integer size) {
@@ -296,35 +214,49 @@ public class FileMetadata {
     }
 
     /**
+     * Is Signed
+     * Defines if the file is digitally signed
      * 
-     * 
-     * 
-     * @return
-     *     The deletedDate
      */
-    @JsonProperty("deletedDate")
-    public Date getDeletedDate() {
-        return deletedDate;
+    @JsonProperty("isSigned")
+    public Boolean getIsSigned() {
+        return isSigned;
     }
 
     /**
+     * Is Signed
+     * Defines if the file is digitally signed
      * 
-     * 
-     * 
-     * @param deletedDate
-     *     The deletedDate
      */
-    @JsonProperty("deletedDate")
-    public void setDeletedDate(Date deletedDate) {
-        this.deletedDate = deletedDate;
+    @JsonProperty("isSigned")
+    public void setIsSigned(Boolean isSigned) {
+        this.isSigned = isSigned;
+    }
+
+    /**
+     * MIME Type
+     * MIME-Type of file.
+     * 
+     */
+    @JsonProperty("mime")
+    public String getMime() {
+        return mime;
+    }
+
+    /**
+     * MIME Type
+     * MIME-Type of file.
+     * 
+     */
+    @JsonProperty("mime")
+    public void setMime(String mime) {
+        this.mime = mime;
     }
 
     /**
      * Action
      * todo replace me
      * 
-     * @return
-     *     The action
      */
     @JsonProperty("action")
     public List<FileMetadataAction> getAction() {
@@ -335,8 +267,6 @@ public class FileMetadata {
      * Action
      * todo replace me
      * 
-     * @param action
-     *     The action
      */
     @JsonProperty("action")
     public void setAction(List<FileMetadataAction> action) {
@@ -344,35 +274,29 @@ public class FileMetadata {
     }
 
     /**
-     * ID
-     * Unique identifier
+     * Language Iso
+     * Short language iso code, in lowercase.
      * 
-     * @return
-     *     The id
      */
-    @JsonProperty("id")
-    public String getId() {
-        return id;
+    @JsonProperty("language")
+    public FileMetadata.Language getLanguage() {
+        return language;
     }
 
     /**
-     * ID
-     * Unique identifier
+     * Language Iso
+     * Short language iso code, in lowercase.
      * 
-     * @param id
-     *     The id
      */
-    @JsonProperty("id")
-    public void setId(String id) {
-        this.id = id;
+    @JsonProperty("language")
+    public void setLanguage(FileMetadata.Language language) {
+        this.language = language;
     }
 
     /**
      * Additional properties
      * todo replace me
      * 
-     * @return
-     *     The additionalProperties
      */
     @JsonProperty("additionalProperties")
     public List<FileMetadataAdditionalProperties> getAdditionalProperties() {
@@ -383,8 +307,6 @@ public class FileMetadata {
      * Additional properties
      * todo replace me
      * 
-     * @param additionalProperties
-     *     The additionalProperties
      */
     @JsonProperty("additionalProperties")
     public void setAdditionalProperties(List<FileMetadataAdditionalProperties> additionalProperties) {
@@ -395,8 +317,6 @@ public class FileMetadata {
      * Unique file content hash value
      * File content hash encoded sha256
      * 
-     * @return
-     *     The hash
      */
     @JsonProperty("hash")
     public String getHash() {
@@ -407,8 +327,6 @@ public class FileMetadata {
      * Unique file content hash value
      * File content hash encoded sha256
      * 
-     * @param hash
-     *     The hash
      */
     @JsonProperty("hash")
     public void setHash(String hash) {
@@ -416,35 +334,9 @@ public class FileMetadata {
     }
 
     /**
-     * 
-     * 
-     * 
-     * @return
-     *     The tenant
-     */
-    @JsonProperty("tenant")
-    public Integer getTenant() {
-        return tenant;
-    }
-
-    /**
-     * 
-     * 
-     * 
-     * @param tenant
-     *     The tenant
-     */
-    @JsonProperty("tenant")
-    public void setTenant(Integer tenant) {
-        this.tenant = tenant;
-    }
-
-    /**
      * Creation date
      * Timestamp of file upload.
      * 
-     * @return
-     *     The createDate
      */
     @JsonProperty("createDate")
     public Date getCreateDate() {
@@ -455,8 +347,6 @@ public class FileMetadata {
      * Creation date
      * Timestamp of file upload.
      * 
-     * @param createDate
-     *     The createDate
      */
     @JsonProperty("createDate")
     public void setCreateDate(Date createDate) {
@@ -467,8 +357,6 @@ public class FileMetadata {
      * order information if needed by client
      * can be set by clients to persist a specific order to display files
      * 
-     * @return
-     *     The order
      */
     @JsonProperty("order")
     public Integer getOrder() {
@@ -479,14 +367,18 @@ public class FileMetadata {
      * order information if needed by client
      * can be set by clients to persist a specific order to display files
      * 
-     * @param order
-     *     The order
      */
     @JsonProperty("order")
     public void setOrder(Integer order) {
         this.order = order;
     }
 
+
+    /**
+     * Language Iso
+     * Short language iso code, in lowercase.
+     * 
+     */
     public enum Language {
 
         DE("de"),
@@ -502,7 +394,7 @@ public class FileMetadata {
             }
         }
 
-        private Language(String value) {
+        Language(String value) {
             this.value = value;
         }
 

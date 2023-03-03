@@ -1,7 +1,7 @@
 
 package com.github.libgraviton.gdk.gravitondyn.eventstatusaction.document;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -19,20 +19,10 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "de",
-    "en",
-    "fr"
+    "en"
 })
 public class EventStatusActionDescription {
 
-    /**
-     * Translated String
-     * String in de locale.
-     * 
-     */
-    @JsonProperty("de")
-    @JsonPropertyDescription("")
-    private String de;
     /**
      * Translated String
      * String in en locale.
@@ -40,50 +30,16 @@ public class EventStatusActionDescription {
      * 
      */
     @JsonProperty("en")
-    @JsonPropertyDescription("")
+    @JsonPropertyDescription("String in en locale.")
     private String en;
-    /**
-     * Translated String
-     * String in fr locale.
-     * 
-     */
-    @JsonProperty("fr")
-    @JsonPropertyDescription("")
-    private String fr;
     @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-
-    /**
-     * Translated String
-     * String in de locale.
-     * 
-     * @return
-     *     The de
-     */
-    @JsonProperty("de")
-    public String getDe() {
-        return de;
-    }
-
-    /**
-     * Translated String
-     * String in de locale.
-     * 
-     * @param de
-     *     The de
-     */
-    @JsonProperty("de")
-    public void setDe(String de) {
-        this.de = de;
-    }
+    private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
     /**
      * Translated String
      * String in en locale.
      * (Required)
      * 
-     * @return
-     *     The en
      */
     @JsonProperty("en")
     public String getEn() {
@@ -95,36 +51,10 @@ public class EventStatusActionDescription {
      * String in en locale.
      * (Required)
      * 
-     * @param en
-     *     The en
      */
     @JsonProperty("en")
     public void setEn(String en) {
         this.en = en;
-    }
-
-    /**
-     * Translated String
-     * String in fr locale.
-     * 
-     * @return
-     *     The fr
-     */
-    @JsonProperty("fr")
-    public String getFr() {
-        return fr;
-    }
-
-    /**
-     * Translated String
-     * String in fr locale.
-     * 
-     * @param fr
-     *     The fr
-     */
-    @JsonProperty("fr")
-    public void setFr(String fr) {
-        this.fr = fr;
     }
 
     @JsonAnyGetter
